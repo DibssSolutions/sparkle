@@ -1,0 +1,35 @@
+.block-title
+    position: relative
+    display: inline-block
+    &:after
+        position: absolute
+        top: 97%
+        left: 10px
+        width: calc(100% + 30px)
+        height: 100%
+        content: ''
+        border-top: 1px solid $green
+        background-color: $white
+        +rotate(-22.3)
+        transform-origin: 0 0
+        z-index: $z-2
+    &__number
+        font-size: 300px
+        font-weight: 700
+        color: $green
+        line-height: 1
+        letter-spacing: -0.1em
+        z-index: $z-1
+    &__rotated
+        position: absolute
+        text-align: right
+        right: 0
+        bottom: 0
+        
+        transform: rotate(-90deg) 
+        font-size: 110px
+        font-weight: 300
+        line-height: 1
+        color: $grey
+        z-index: $z-3
+        transform-origin: 100% 100%

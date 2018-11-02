@@ -14,48 +14,41 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <header class="header">
+        <div class="container-inner header__inner">
+          <div class="header__logo">
+            <div class="logo">
+              <img class="logo__image" src="img/logo.png" alt="logo">
+              <span class="logo__text">sparkle design</span>
+            </div>
+          </div>
+          <div class="header__nav">
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">О нас</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Наши работы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Услуги</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Клиенты</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <h2 class="block-title">
+        <span class="block-title__number"> 01 </span>
+        <span class="block-title__rotated"> About </span>
+      </h2>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

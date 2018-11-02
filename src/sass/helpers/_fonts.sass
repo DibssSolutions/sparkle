@@ -5,3 +5,18 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+$tahoma: 'Tahoma'
+$PFD: 'PFDinDisplayPro'
+
+@font-face
+	+fontdefault(normal, 400, $tahoma)
+	+fontpath('Tahoma', 'Tahoma', Tahoma)
+
+@font-face
+	+fontdefault(normal, 700, $PFD)
+	+fontpath('PFDinDisplayPro-Bold', 'PFDinDisplayPro-Bold', PFDinDisplayPro-Bold)
+
+@font-face
+	+fontdefault(normal, 300, $PFD)
+	+fontpath('PFDinDisplayPro-Light', 'PFDinDisplayPro-Light', PFDinDisplayPro-Light)
