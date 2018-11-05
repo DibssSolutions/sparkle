@@ -5,3 +5,5 @@ import { isTouch } from './utils';
 svg4everybody();
 
 if (!isTouch()) BODY.addClass(NO_TOUCH);
+
+import './components/index.js';
