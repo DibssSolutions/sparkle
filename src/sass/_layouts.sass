@@ -1,4 +1,60 @@
 .container-inner
-    max-width: 1150px
+    max-width: 1160px
     margin: 0 auto
     padding: 0 20px
+
+.section 
+    padding: 140px 0 150px
+
+.section-descr
+    margin-bottom: 90px
+
+$num: 12
+$gap: 15px 
+
+@for $i from 1 through $num
+    .col-#{$i}
+        flex: 0 0 percentage($i / $num) 
+        min-width: percentage($i / $num) 
+        padding: 0 $gap
+       
+.row 
+    display: flex
+    flex-wrap: wrap
+
+    
+.d-sm-block
+    display: none
+    +sm 
+        display: block
+
+.d-md-block 
+    display: none
+    +md 
+        display: block
+
++lg 
+    .d-lg-none
+        display: none
+    .col-lg-55
+        flex: 0 0 55%
+    .col-lg-76
+        flex: 0 0 76%
+    .col-lg-45
+        flex: 0 0 45%
++md 
+    .d-md-none
+        display: none
+    .col-md-100
+        flex: 0 0 100%
+    .col-md-76
+        flex: 0 0 76%
+    .col-md-55
+        flex: 0 0 55%
+
+
+
++sm
+    .d-sm-none
+        display: none
+

@@ -1,8 +1,47 @@
-<h2 class="block-title">
-    <span class="block-title__number">
-        01
-    </span> 
-    <span class="block-title__rotated">
-        About
-    </span>
-</h2>
+<section class="about section">
+    <div class="about__inner container-inner">
+        <div class="row">
+            <div class="col-5">
+                {{mixins.megaTitle({ num: '01', text: "about" })}}
+            </div>
+            <div class="col-7">
+                <h3 class="title">
+                    About project riel
+                </h3>
+                <div class="section-descr">
+                    <p>
+                        Task: to create corporate website for development corporation – leader of real estate market in Lviv city Ukraine
+                    </p>
+                </div>
+
+                <h5 class="list-title">
+                    our team created:
+                </h5>
+                <ul class="created-list">
+                    {% for item in[
+                        {
+                            num: 8,
+                            feature: 'user scripts'
+                        }, {
+                            num: 20,
+                            feature: 'prototypes of <br>unique pages'
+                        }, {
+                            num: 4,
+                            feature: 'concepts <br>of design'
+                        }, {
+                            num: 9,
+                            feature: 'unique UX blocks'
+                        }
+                    ] %}
+                        <li class="created-list__item">
+                            <span class="created-list__number">{{item.num}}</span>
+                            <span class="created-list__feature">{{item.feature | safe}}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</section>

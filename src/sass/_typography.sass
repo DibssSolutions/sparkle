@@ -1,11 +1,13 @@
 .block-title
     position: relative
     display: inline-block
+    margin-left: -15px
+    margin-top: 42px
     &:after
         position: absolute
-        top: 97%
-        left: 10px
-        width: calc(100% + 30px)
+        top: 112%
+        left: 4px
+        width: calc(100% + 35px)
         height: 100%
         content: ''
         border-top: 1px solid $green
@@ -13,23 +15,67 @@
         +rotate(-22.3)
         transform-origin: 0 0
         z-index: $z-2
+        .concept &
+            background-color: $light_bg
     &__number
         font-size: 300px
         font-weight: 700
         color: $green
-        line-height: 1
-        letter-spacing: -0.1em
+        line-height: 132px
+        letter-spacing: -0.08em
         z-index: $z-1
+        text-shadow: -6px 0px 4px rgba(0, 0, 0, 0.1)
     &__rotated
         position: absolute
         text-align: right
         right: 0
         bottom: 0
-        
-        transform: rotate(-90deg) 
+        text-transform: uppercase
+        transform: rotate(-90deg) translateX(20px) 
         font-size: 110px
         font-weight: 300
         line-height: 1
         color: $grey
         z-index: $z-3
         transform-origin: 100% 100%
+        .block-title_rotated & 
+            transform: rotate(90deg) translate(100%, 100%) 
+
+.title
+    margin-bottom: 13px
+    font-size: 40px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: normal
+    line-height: 1
+    
+.list-title
+    position: relative
+    padding-left: 60px
+    margin-bottom: 32px
+    font-size: 26px
+    line-height: 1.31
+    letter-spacing: 0.5px
+    font-weight: 300
+    text-transform: uppercase
+    &:before
+        position: absolute
+        top: calc(50% - 1px)
+        left: 0
+        height: 2px
+        width: 40px
+        background-color: $green
+        content: ''
+
+.list
+    padding-left: 60px
+    &__item
+        position: relative
+        margin-bottom: 16px
+        &:before
+            position: absolute
+            top: calc(50% - 4px)
+            left: -24px
+            +circle(8)
+            background-color: $blue
+            content: ''

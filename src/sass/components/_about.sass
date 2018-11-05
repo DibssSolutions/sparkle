@@ -1,0 +1,37 @@
+.created-list
+    display: flex
+    flex-wrap: wrap
+    &__item
+        +flex-size(50%)
+        padding-left: 4px
+        position: relative
+        &:before
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            height: 48px
+            width: 42px
+            background-color: $green
+            z-index: -1
+            transform: skewY(-21.3deg)
+    &__number
+        display: inline-block
+        margin-right: 9px
+        text-shadow: -3px 0px 7px rgba(0, 0, 0, 0.2)
+        // margin-left: -5px
+        font-size: 140px
+        font-weight: bold
+        line-height: 1
+        color: $blue
+    &__feature
+        display: inline-block
+        margin-top: 60px
+        vertical-align: top
+        line-height: normal
+
+.about
+    .list-title
+        margin: 90px 0 39px
+    .title
+        margin-bottom: 4px

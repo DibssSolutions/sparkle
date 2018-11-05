@@ -1,0 +1,104 @@
+.hero
+    height: calc(100vh - 127px)
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    // +vertical
+    // background-image: linear-gradient(-115deg, #1f2f46, #4d81a6),url(../img/bg_3.png)
+    // background-blend-mode: overlay
+    background-image: url(../img/hero.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 0 0
+    background-color: rgba($black, 0.3)
+    text-align: center
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        // +icenter
+        width: 1000px
+        padding: 0 20px
+        margin: 0 auto
+        
+    &__logo
+        +flex-size(50%)
+        text-align: left
+        img
+            max-width: 100%
+    &__right
+        +flex-size(50%)
+        text-align: left
+        //     filter: drop-shadow(10px 10px 2px rgba(0,0,0,.9))
+    &__slogan
+        position: relative
+        padding-left: 41px
+        margin-top: 108px
+        margin-bottom: 33px
+        &:before 
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            height: 100%
+            border-left: 5px solid $white
+            border-top: 5px solid transparent
+            border-bottom: 5px solid transparent
+            width: 0
+    &__title
+        font-size: 60px
+        font-weight: bold
+        font-style: normal
+        line-height: 1
+        letter-spacing: 3.6px
+        text-transform: uppercase
+        color: $white
+    &__subtitle
+        font-size: 24px
+        font-weight: 300
+        letter-spacing: 9.6px
+        color: rgba($white, 0.5)
+    &__btn
+        display: inline-block
+        padding: 10px 42px
+        font-size: 0
+        color: $white
+        background: linear-gradient(to bottom, #e2242a, #d31a20)
+        border-radius: 3px
+        & > * 
+            +icenter
+        span 
+            font-size: 14px
+            text-transform: uppercase
+            line-height: 2.14
+            letter-spacing: 1.4px
+            text-align: center
+        .icon
+            font-size: 23px
+            margin-right: 12px
+    &__down
+        position: absolute
+        bottom: 10%
+        left: 50%
+        transform: translateX(-50%)
+
+.mouse-down-btn
+    color: $white
+    position: relative
+    .icon-mouse
+        font-size: 28px
+        margin-bottom: 10px
+    .icon-arrow-down
+        position: absolute
+        top: calc(100% + 5px)
+        left: 50%
+        transform: translate(-50%, 0)
+        animation: flow 2s alternate infinite both linear
+
+@keyframes flow
+    from 
+        transform: translate(-50%, 0)
+    to 
+        transform: translate(-50%, 5px)
