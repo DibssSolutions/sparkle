@@ -1,0 +1,66 @@
+.details
+    position: relative
+    z-index: $zS
+    &__box
+        padding: 30px 40px
+        position: absolute
+        top: 0
+        left: 0
+        border-left: 8px solid $dark_green
+        border-radius: 3px
+        box-shadow: -3px 0px 7px 0 rgba(0, 0, 0, 0.15)
+        background-color: $green
+        &:after
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            width: 20px
+            background-image: repeating-linear-gradient(45deg, rgba($black, 0.2), rgba($black, 0.2) 4px,  transparent 4px,transparent 10px)
+            content: ''
+    &__circles
+        position: absolute
+        z-index: $zS
+    &__circle-inner
+        +vcenter
+        +circle(12)
+        background-color: $green
+        z-index: $z-2
+    &__circle-outer
+        +vcenter
+        +circle(26)
+        z-index: $z-1
+        background-color: rgba($green, 0.3)
+    &__line
+        .is-active &
+            transform: scale(1)
+
+[data-detail="1"]
+    .details__circles
+        top: 45px
+        left: -295px
+    .details__line
+        position: absolute
+        top: 43px
+        left: -293px
+        right: 100%
+        // background-color: red
+        width: 100%
+        
+        height: 3px
+        transform: rotate(2deg) 
+        transform-origin: 0 0 
+        overflow: hidden
+        &:after
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            background-color: red
+            content: ''
+            transform: translateX(-105%)
+            transition: transform 2s
+    &:hover
+        .details__line:after
+            transform: translateX(0)
