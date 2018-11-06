@@ -15,6 +15,7 @@
   },
   "authors": "<DibssSolutions>",
   "devDependencies": {
+    "animejs": "^2.2.0",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.2.3",
@@ -62,6 +63,7 @@
     "require-yaml": "^0.0.1",
     "run-sequence": "^1.1.5",
     "scrollmonitor": "^1.2.4",
+    "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
     "through2": "^2.0.1",
     "webpack": "^2.2.1",

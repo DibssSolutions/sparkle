@@ -18,19 +18,26 @@
 
             </div>
             <div class="col-5">
-                {{mixins.megaTitle({ num: '04', text: "project page", modifier: true })}}
-                <div class="details" data-detail="1">
-                    <div class="details__circles">
-                        <span class="details__circle-inner"></span>
-                        <span class="details__circle-outer"></span>
-                    </div>
-                    <div class="details__line"></div>
-                    <div class="details__box">
-                        <div class="details__text">
-                            Phone number changes according to location and user`search request
-                        </div>
-                    </div>
-                </div>
+                {{mixins.megaTitle({ num: '4', text: "project page", modifier: true })}}
+                {% for item in [
+                    'Phone number changes according to location and user`search 
+                    request',
+                    'Each construction stage is a separate page',
+                    'Numerical indicators of the construction odject',
+                    'Description of the construction object',
+                    'Pre-entry form for viewing apartments',
+                    'Conveniently shown prices and terms of delivery of the construction object',
+                    'Unique icons for the project',
+                    'Photos of construction progress',
+                    'General plan of the construction object',
+                    'Planning of apartments of any floor of the building object',
+                    'Pop-up with the scheme of any floor of this project',
+                    'Feedback form for consultation with experts',
+                    'Phone number changes according to location and user`search 
+                    request'
+                ] %}
+                    {{mixins.detail({number: loop.index, text: item})}}
+                {% endfor %}
             </div>
         </div>
     </div>

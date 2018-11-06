@@ -1,29 +1,30 @@
-<section class="functional section">
-    <div class="functional__inner container-inner">
+<section class="features section">
+    <div class="features__inner container-inner">
         <div class="row">
             <div class="col-5">
-                {{mixins.megaTitle({ num: '3', text: "functional" })}}
+                {{mixins.megaTitle({ num: '5', text: "Features" })}}
             </div>
             <div class="col-7">
                 <h3 class="title">
-                    Functional of project
+                    Features of the  project
                 </h3>
                 <div class="section-descr">
                     <p>
-                        The high level of functionality makes the site effective
+                        The web site has a set of special features
                     </p>
                 </div>
 
                 <h5 class="list-title">
-                    Main screen. Slider landing.
+                    Adaptive functionality. It changes according to location and user’s search request
                 </h5>
-                <ul class="list">
-                    {% for item in["The screens are switched with scrolling of the mouse wheel.", "Animated screen transition."] %}
-                        <li class="list__item">
-                            {{item}}
-                        </li>
-                    {% endfor %}
-                </ul>
+                <div class="slider js-slider">
+                    <div class="slider__slide">
+                        <img src="img/slider_img_1.png" alt="lviv slide">
+                    </div>
+                    <div class="slider__slide">
+                        <img src="img/slider_img_1.png" alt="lviv slide">
+                    </div>
+                </div>
                 <div class="functional__image-1">
                     <img src="img/functional_1.png" alt="functional_1">
                 </div>

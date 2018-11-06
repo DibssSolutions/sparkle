@@ -3,13 +3,12 @@
     display: inline-block
     margin-left: -15px
     margin-top: 42px
-    &:after
+    &__line
         position: absolute
         top: 112%
         left: 4px
-        width: calc(100% + 35px)
+        width: calc(100% + 65px)
         height: 100%
-        content: ''
         border-top: 1px solid $green
         background-color: $white
         +rotate(-22.3)
@@ -17,12 +16,12 @@
         z-index: $z-2
         .concept &
             background-color: $light_bg
-    &__number
+    &__numbers
         font-size: 300px
         font-weight: 700
         color: $green
         line-height: 132px
-        letter-spacing: -0.08em
+        letter-spacing: -0.167em
         z-index: $z-1
         text-shadow: -6px 0px 4px rgba(0, 0, 0, 0.1)
     &__rotated
@@ -34,7 +33,7 @@
         transform: rotate(-90deg) translateX(20px) 
         font-size: 110px
         font-weight: 300
-        line-height: 1
+        line-height: 0.6    
         color: $grey
         z-index: $z-3
         transform-origin: 100% 100%

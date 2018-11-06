@@ -32,12 +32,31 @@
 {% endmacro %} #}
 
 {% macro megaTitle(props) %}
-    <h2 class="block-title{% if props.modifier %} block-title_rotated{% endif %}">
-        <span class="block-title__number">
-            {{props.num}}
+    <h2 class="block-title{% if props.modifier %} block-title_rotated{% endif %}" data-title="data-title">
+        <span class="block-title__numbers">
+            <span data-title-number="1">0</span>
+            <span data-title-number="1">{{props.num}}</span>
         </span>
-        <span class="block-title__rotated">
+        <span class="block-title__rotated" data-title-rotater="data-title-rotater">
             {{props.text}}
         </span>
+        <span class="block-title__line" data-title-line="data-title-line"></span>
     </h2>
+{% endmacro %}
+
+{% macro detail(props) %}
+    <div class="details" data-detail="{{props.number}}">
+        <div class="details__circles">
+            <span class="details__circle-inner" data-detail-circle-inner="data-detail-circle-inner"></span>
+            <span class="details__circle-outer" data-detail-circle-outer="data-detail-circle-outer"></span>
+        </div>
+        <div class="details__line-wrapper">
+            <span class="details__line" data-detail-line="data-detail-line"></span>
+        </div>
+        <div class="details__box" data-detail-box="data-detail-box">
+            <div class="details__text" data-detail-text="data-detail-text">
+                {{props.text}}
+            </div>
+        </div>
+    </div>
 {% endmacro %}

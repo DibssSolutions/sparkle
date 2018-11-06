@@ -1,9 +1,17 @@
 [data-anim-from]
 	position: relative
 	opacity: 0
+	transition: opacity $longTr, transform $longTr
+	&.is-active
+		transform: translate(0)
+		opacity: 1
 	
 [data-anim-from="bottom"]
 	transform: translateY(50px)
 
 [data-anim-from="right"]
-	transform: translateX(500px)
+	transform: translateX(50px)
+
+[data-detail-circle-inner],
+[data-detail-circle-outer]
+	opacity: 0

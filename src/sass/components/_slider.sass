@@ -1,0 +1,27 @@
+.slider
+    &__slide
+        // max-height: 200px
+    img
+        max-width: 100%
+    &__btn
+        display: inline-block
+        position: absolute
+        top: 0
+        height: 40px
+        width: 40px
+        z-index: $zS
+        border: 1px solid $grey
+        transition: background-color $tr, border-color $tr
+        +hover
+            background-color: $green
+            border-color: $green
+            .icon
+                color: $white
+        .icon
+            +vcenter
+            transition: color $tr
+        &_prev
+            left: 0
+        &_next
+            left: 60px
+    
