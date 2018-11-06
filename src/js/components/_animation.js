@@ -68,13 +68,41 @@ DOC.ready(() => {
     });
   });
 
-  // $(titles).each((index, el) => {
-  //   var el = $(el);
-  //   var parent = el.closest('[data-detail]')[0];
-  //   var circleInner = parent.querySelector('[data-detail-circle-inner]');
-  //   var circleOuter = parent.querySelector('[data-detail-circle-outer]');
-  //   var line = parent.querySelector('[data-detail-line]');
-  //   var text = parent.querySelector('[data-detail-text]');
-  //   var box = el[0];
-  // });
+  $(titles).each((index, el) => {
+    var elJS = $(el)[0];
+    var titleLine = elJS.querySelector('[data-title-line]');
+    var titleRotated = elJS.querySelector('[data-title-rotated]');
+    var titleNumbers = elJS.querySelectorAll('[data-title-number]');
+
+    var titleWatcher = scrollMonitor.create(el, -100);
+    titleWatcher.enterViewport(function() {
+      if ($(el).hasClass('is-animated')) return false;
+      var tl = anime.timeline({ easing: 'linear' });
+      tl.add({
+        targets: titleLine,
+        scaleX: [0, 1],
+        rotate: '-22.3deg',
+        opacity: { value: [0, 1], duration: 10 },
+        duration: 500
+      })
+        .add({
+          targets: titleNumbers,
+          opacity: [0, 1],
+          translateY: [100, 0],
+          duration: 2000,
+          delay: function(el, i, l) {
+            return i * 200;
+          },
+          offset: '-=200'
+        })
+        .add({
+          targets: titleRotated,
+
+          opacity: [0, 1],
+          complete: function(anim) {
+            $(el).addClass('is-animated');
+          }
+        });
+    });
+  });
 });
