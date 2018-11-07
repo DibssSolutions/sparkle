@@ -89,7 +89,7 @@ DOC.ready(() => {
           targets: titleNumbers,
           opacity: [0, 1],
           translateY: [100, 0],
-          duration: 2000,
+          duration: 500,
           delay: function(el, i, l) {
             return i * 200;
           },

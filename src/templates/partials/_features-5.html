@@ -6,7 +6,7 @@
             </div>
             <div class="col-7">
                 <h3 class="title">
-                    Features of the  project
+                    Features of the project
                 </h3>
                 <div class="section-descr">
                     <p>
@@ -17,30 +17,36 @@
                 <h5 class="list-title">
                     Adaptive functionality. It changes according to location and user’s search request
                 </h5>
-                <div class="slider js-slider">
-                    <div class="slider__slide">
-                        <img src="img/slider_img_1.png" alt="lviv slide">
-                    </div>
-                    <div class="slider__slide">
-                        <img src="img/slider_img_1.png" alt="lviv slide">
-                    </div>
-                </div>
-                <div class="functional__image-1">
-                    <img src="img/functional_1.png" alt="functional_1">
-                </div>
-                <h5 class="list-title functional__list-title-2">
-                    Project page. Section “Apartments planning”
-                </h5>
-                <ul class="list">
-                    <li class="list__item">
-                        2D and 3D representations of plan alternate each other
-                    </li>
-                </ul>
-                <div class="functional__image-2">
-                    <img src="img/functional_2.png" alt="functional_2">
-                </div>
+
             </div>
         </div>
     </div>
-
+    <div class="slider js-slider">
+        <div class="slider__slide">
+            <div class="slider__marks">
+                {% for icon in ['bed', 'map-marker-alt', 'mobile-phone'] %}
+                    {{mixins.mark({number: loop.index, icon: icon})}}
+                {% endfor %}
+            </div>
+            <ul class="list slider__text js-slider-text">
+                <li class="list__item">
+                    User from Lviv, request “cheap property”
+                </li>
+            </ul>
+            <div class="slider__image" style="background-image: url(img/slider_img_1.png)"></div>
+        </div>
+        <div class="slider__slide">
+            <div class="slider__marks">
+                {% for icon in ['bed', 'map-marker-alt', 'mobile-phone'] %}
+                    {{mixins.mark({number: loop.index, icon: icon})}}
+                {% endfor %}
+            </div>
+            <ul class="list slider__text js-slider-text">
+                <li class="list__item">
+                    User from Kyiv, request “Lviv District”
+                </li>
+            </ul>
+            <div class="slider__image" style="background-image: url(img/build.png)"></div>
+        </div>
+    </div>
 </section>

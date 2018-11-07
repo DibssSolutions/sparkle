@@ -14,16 +14,6 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <svg>
-        <defs>
-          <filter id="green">
-            <feColorMatrix type="matrix" values="0   0   0   0   0
-								0   1   0   0.3   0
-								0   1   0   0   0
-								0   0   0   1   0 " />
-          </filter>
-        </defs>
-      </svg>
       <header class="header">
         <div class="container-inner header__inner">
           <div class="header__logo">
@@ -407,25 +397,133 @@
                 <p> The web site has a set of special features </p>
               </div>
               <h5 class="list-title"> Adaptive functionality. It changes according to location and user’s search request </h5>
-              <div class="slider js-slider">
-                <div class="slider__slide">
-                  <img src="img/slider_img_1.png" alt="lviv slide">
+            </div>
+          </div>
+        </div>
+        <div class="slider js-slider">
+          <div class="slider__slide">
+            <div class="slider__marks">
+              <div class="mark" data-mark="1">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
                 </div>
-                <div class="slider__slide">
-                  <img src="img/slider_img_1.png" alt="lviv slide">
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-bed">
+                      <use xlink:href="img/sprite.svg#icon-bed"></use>
+                    </svg>
+                  </span>
                 </div>
               </div>
-              <div class="functional__image-1">
-                <img src="img/functional_1.png" alt="functional_1">
+              <div class="mark" data-mark="2">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+                </div>
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-map-marker-alt">
+                      <use xlink:href="img/sprite.svg#icon-map-marker-alt"></use>
+                    </svg>
+                  </span>
+                </div>
               </div>
-              <h5 class="list-title functional__list-title-2"> Project page. Section “Apartments planning” </h5>
-              <ul class="list">
-                <li class="list__item"> 2D and 3D representations of plan alternate each other </li>
-              </ul>
-              <div class="functional__image-2">
-                <img src="img/functional_2.png" alt="functional_2">
+              <div class="mark" data-mark="3">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+                </div>
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-mobile-phone">
+                      <use xlink:href="img/sprite.svg#icon-mobile-phone"></use>
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
+            <ul class="list slider__text js-slider-text">
+              <li class="list__item"> User from Lviv, request “cheap property” </li>
+            </ul>
+            <div class="slider__image" style="background-image: url(img/slider_img_1.png)"></div>
+          </div>
+          <div class="slider__slide">
+            <div class="slider__marks">
+              <div class="mark" data-mark="1">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+                </div>
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-bed">
+                      <use xlink:href="img/sprite.svg#icon-bed"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="mark" data-mark="2">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+                </div>
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-map-marker-alt">
+                      <use xlink:href="img/sprite.svg#icon-map-marker-alt"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="mark" data-mark="3">
+                <div class="mark__circles">
+                  <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+                  <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+                </div>
+                <div class="mark__dashed-line" data-mark-dashed-line>
+                  <span class="mark__line" data-mark-line="data-mark-line"></span>
+                </div>
+                <div class="mark__icon-circles">
+                  <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+                  <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+                  <span class="mark__icon" data-mark-icon="data-mark-icon">
+                    <svg class="icon icon-mobile-phone">
+                      <use xlink:href="img/sprite.svg#icon-mobile-phone"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <ul class="list slider__text js-slider-text">
+              <li class="list__item"> User from Kyiv, request “Lviv District” </li>
+            </ul>
+            <div class="slider__image" style="background-image: url(img/build.png)"></div>
           </div>
         </div>
       </section>

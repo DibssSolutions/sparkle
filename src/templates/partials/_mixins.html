@@ -60,3 +60,23 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro mark(props) %}
+    <div class="mark" data-mark="{{props.number}}">
+        <div class="mark__circles">
+            <span class="mark__circle-inner" data-mark-circle-inner="data-mark-circle-inner"></span>
+            <span class="mark__circle-outer" data-mark-circle-outer="data-mark-circle-outer"></span>
+        </div>
+        <div class="mark__dashed-line" data-mark-dashed-line>
+            <span class="mark__line" data-mark-line="data-mark-line"></span>
+        </div>
+        <div class="mark__icon-circles">
+            <span class="mark__icon-circle-inner" data-mark-icon-circle-inner="data-mark-icon-circle-inner"></span>
+            <span class="mark__icon-circle-outer" data-mark-icon-circle-outer="data-mark-icon-circle-outer"></span>
+            <span class="mark__icon" data-mark-icon="data-mark-icon">
+                {{icon(props.icon)}}
+            </span>
+
+        </div>
+    </div>
+{% endmacro %}

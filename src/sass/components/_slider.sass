@@ -1,14 +1,19 @@
 .slider
+    float: right
+    width: calc(50vw - 560px + 653.3px - 15px - 7.5px)
+    .slick-list
+        padding-top: 20px
     &__slide
         // max-height: 200px
+        position: relative
     img
         max-width: 100%
     &__btn
         display: inline-block
         position: absolute
         top: 0
-        height: 40px
-        width: 40px
+        height: 50px
+        width: 50px
         z-index: $zS
         border: 1px solid $grey
         transition: background-color $tr, border-color $tr
@@ -24,4 +29,9 @@
             left: 0
         &_next
             left: 60px
+    &__text
+        margin-top: 100px
+    &__image
+        +cover
+        padding-bottom: 630px
     

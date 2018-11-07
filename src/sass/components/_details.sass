@@ -105,3 +105,82 @@
     &:hover
         .details__line
             transform: translateX(0)
+
+.mark
+    position: absolute
+    display: inline-block
+    height: calc(26px + 119px + 66px)
+    +hover 
+        .mark__line
+            transform: translateY(0)
+    &__circles
+        position: absolute
+        z-index: $zS
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+    &__circle-inner
+        +vcenter
+        +circle(12)
+        background-color: $green
+        z-index: $z-2
+        opacity: 0
+    &__circle-outer
+        +vcenter
+        +circle(26)
+        z-index: $z-1
+        background-color: rgba($green, 0.3)
+        opacity: 0
+    &__icon-circles
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+    &__icon-circle-inner
+        +circle(50)
+        +vcenter
+        background-color: $green
+        opacity: 0
+    &__icon-circle-outer
+        +circle(66)
+        +vcenter
+        background-color: rgba($green, 0.2)
+        opacity: 0
+    &__icon
+        +vcenter
+        font-size: 0
+        opacity: 0
+        .icon
+            color: $white
+            font-size: 20px
+    &__dashed-line
+        position: absolute
+        opacity: 0
+        top: 0
+        bottom: 0
+        transform: translate(-50%, 100%)
+        left: 50%
+        background-image: linear-gradient(to bottom, $green 50%,  transparent 50%)
+        background-size: 3px 3px 
+        height: 100%
+        width: 1px
+        overflow: hidden
+        
+    &__line
+        +coverdiv
+        left: 0
+        width: 1px
+        background-color: $green
+        transform: translateY(100%)
+        z-index: $z-2
+
+[data-mark="1"]
+    top: 224px
+    left: 462px
+
+[data-mark="2"]
+    top: 130px
+    left: 565px
+
+[data-mark="3"]
+    top: 13px
+    left: 700px

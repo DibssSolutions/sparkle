@@ -1,4 +1,5 @@
 import slick from 'slick-carousel';
+import anime from 'animejs';
 import { BODY, DOC, WIN, INIT, widthMD, widthSM } from '../constants';
 import { buildIcon } from '../utils';
 
@@ -13,17 +14,12 @@ DOC.ready(() => {
       slider.addClass(INIT);
     });
 
-    // slider.on('afterChange', (event, slick, currentSlide) => {
-    //   // PAUSE ALL VIDEOS
-    //   const videos = $('.offers-slider__slide video');
-    //   videos.each((i, el) => {
-    //     $(el)[0].pause();
-    //   });
-    //   // PLAY CURRENT
-    //   let slides = $('.offers-slider__slide');
-    //   const videoCurrent = $(slides[currentSlide]).find('video')[0];
-    //   videoCurrent ? videoCurrent.play() : false;
-    // });
+    slider.on('afterChange', (event, slick, currentSlide) => {
+      // PAUSE ALL VIDEOS
+      let el = slick.$slides.get(currentSlide);
+      animateEnter(el);
+      console.log(el);
+    });
 
     slider.slick({
       dots: false,
@@ -58,5 +54,64 @@ DOC.ready(() => {
       //     }
       //   ]
     });
+
+    function animateEnter(el) {
+      const marks = el.querySelectorAll('[data-mark]');
+      const marksArr = [].slice.call(marks);
+      marksArr.forEach((mark, index) => {
+        setTimeout(() => animateMark(mark), index * 1000);
+      });
+    }
+
+    function animateMark(el) {
+      const innerCircle = el.querySelector('[data-mark-circle-inner]');
+      const outerCircle = el.querySelector('[data-mark-circle-outer]');
+      const innerIconCircle = el.querySelector('[data-mark-icon-circle-inner]');
+      const outerIconCircle = el.querySelector('[data-mark-icon-circle-outer]');
+      const icon = el.querySelector('[data-mark-icon]');
+      const line = el.querySelector('[data-mark-line]');
+      const dashedLine = el.querySelector('[data-mark-dashed-line]');
+      const text = el.querySelector('.js-slider-text');
+
+      var tl = anime.timeline({ easing: 'linear' });
+      tl.add({
+        targets: innerCircle,
+        opacity: 1,
+        duration: 200
+      })
+        .add({
+          targets: outerCircle,
+          opacity: 1,
+          duration: 200
+        })
+        .add({
+          targets: dashedLine,
+          opacity: 1,
+          translateY: ['100%', '0%'],
+          duration: 1000
+        })
+        .add({
+          targets: line,
+          opacity: 1,
+          translateY: ['100%', '0%'],
+          duration: 1000
+          // delay: '-=200'
+        })
+        .add({
+          targets: innerIconCircle,
+          opacity: 1,
+          duration: 200
+        })
+        .add({
+          targets: outerIconCircle,
+          opacity: 1,
+          duration: 200
+        })
+        .add({
+          targets: icon,
+          opacity: 1,
+          duration: 200
+        });
+    }
   });
 });
