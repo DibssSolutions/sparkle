@@ -1,0 +1,63 @@
+.features
+    &__slider
+        +clr
+
+%left
+    +flex-size(calc(50% - 560px + 467px + 15px))
+%right
+    +flex-size(calc(50% - 560px + 653px - 15px))
+
+.admin
+    display: flex
+    &__images
+        @extend %left
+        position: relative
+        z-index: $zS
+    &__image-rect
+        padding-bottom: 80%
+        +cover
+    &__image-circle[data-anim-from]
+        position: absolute
+        top: 50%
+        right: 10%
+        transform: translateY(-50%)
+        +contain
+        +circle(360)
+        transition-delay: $longTr
+        &.is-active
+            position: absolute
+            transform: translateY(-50%) 
+    &__text
+        @extend %right
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding-left: 70px
+
+.nomination
+    display: flex
+    &__text
+        @extend %left
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-end
+        z-index: $z-2
+        &:after
+            position: absolute
+            top: 0
+            right: 0
+            transform-origin: 100% 0
+            height: calc(100% + 122px)
+            width: 200%
+            transform: skew(23deg, 5.7deg)
+            background-image: linear-gradient(-5.7deg, $blue 122px, $white 122px)
+            content: ''
+            z-index: -1
+    &__image
+        position: relative
+        @extend %right
+        +cover
+        background-position: 100% 0
+        padding-bottom: 700px

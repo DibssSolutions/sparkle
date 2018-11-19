@@ -1,0 +1,59 @@
+.processes
+    height: 2000px
+    background-image: url(../img/process_build.png), url(../img/process_bg.jpg)
+    background-repeat: no-repeat
+    background-size: auto, contain
+    background-position: 100% 100%, 100% 100%
+    &__main
+        position: relative
+        display: flex
+        flex-flow: column
+    &__path
+        position: absolute
+        top: 0
+        left: 0
+
+.process
+    max-width: 400px
+    display: flex
+    position: relative
+    &_right
+        margin-left: auto
+    &__icons
+        position: relative
+        +flex-size(100px)
+    &__circle-outer
+        +vcenter
+        +circle(100)
+        background-color: rgba($green, 0.3)
+        .process:last-child &
+            background-color: red
+    &__circle-inner
+        +vcenter
+        +circle(80)
+        background-color: $green
+    &__icon
+        +vcenter
+        color: $white
+        font-size: 0
+        .icon
+            font-size: 30px
+    &__motion-el
+        +circle(10)
+        background-color: red
+        position: absolute
+        top: 50px
+        left: 50px
+    &__path
+        position: absolute
+        top: 50px
+        left: 50px
+        svg
+            fill-rule: evenodd
+            stroke: rgb(145, 200, 76)
+            stroke-width: 1px
+            stroke-linecap: butt
+            stroke-linejoin: miter
+            opacity: 0.502
+            fill: none
+

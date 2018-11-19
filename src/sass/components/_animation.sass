@@ -12,8 +12,23 @@
 [data-anim-from="right"]
 	transform: translateX(50px)
 
-[data-detail-circle-inner],
-[data-detail-circle-outer]
+[data-anim-from="left"]
+	transform: translateX(-50px)
+
+[data-anim-from="opacity"]
+	opacity: 0
+	&.is-active
+		opacity: 1
+		// transform: initial
+
+[data-anim-delay="0.3"]
+	animation-delay: $tr
+
+[data-circle-inner],
+[data-circle-outer],
+[data-icon-circle-inner],
+[data-icon-circle-outer],
+[data-icon]
 	opacity: 0
 
 [data-title-number],

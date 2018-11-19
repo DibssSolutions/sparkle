@@ -1,0 +1,195 @@
+{% set processes = [
+    {
+        icon: 'light-bulb',
+        title: 'Idea',
+        text: "Developing the idea of creating 
+        a project, we immerse ourselves 
+        in the specifics of the client's industry",
+        modifier: 'left',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.177 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+        </svg>'
+    },
+    {
+        icon: 'settings',
+        title: 'UX + Wireframes',
+        text: "Based on the stated goals and tasks, 
+        we develop all the components of future 
+        product’s interface thoroughly",
+        modifier: 'right', 
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
+            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.935 284.469,1.715 284.469,1.715 "/>
+        </svg>'
+    },
+    {
+        icon: 'paint-brush',
+        title: 'UI design',
+        text: "We create an efficient and interesting 
+        design for every component. In our 
+        team we have the bestdesigners",
+        modifier: 'left',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.178 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+        </svg>'
+    },
+    {
+        icon: 'clone',
+        title: 'Frontend development',
+        text: "At this stage we approach materialization 
+        of design with visual effects and obtain the 
+        final implementation of future web-product",
+        modifier: 'right',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
+            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.934 284.469,1.715 284.469,1.715 "/>
+        </svg>'
+    },
+    {
+        icon: 'code',
+        title: 'Backend development',
+        text: "At this stage we implement the scripts 
+        and enliven plugins. Now the overall visual 
+        functionality will become accessible to a user",
+        modifier: 'left',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
+            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.934 284.469,1.715 284.469,1.715 "/>
+        </svg>'
+    },
+    {
+        icon: 'user-shape',
+        title: 'Testing',
+        text: "At this stage we check thoroughly every 
+        element’s operability, make adjustments 
+        to design and layouts if necessary",
+        modifier: 'right',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.178 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+        </svg>'
+    },
+    {
+        icon: 'gem',
+        title: 'The project is completed!',
+        modifier: 'left',
+        path: '
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
+            <path d="M0.500,161.498 C0.500,161.498 11.705,75.935 81.491,36.668 C153.650,-3.935 284.469,1.715 284.469,1.715 "/>
+        </svg>'
+    }
+
+] %}
+
+<section class="processes section">
+  <div class="processes__inner container-inner">
+    <div class="row">
+      <div class="col-9">
+        <h3 class="title" data-anim-from="left">Process of creation</h3>
+        <div class="processes__descr section-descr" data-anim-from="left">
+          <p>
+            Creating such a responsible site requires a serious approach and a
+            professional level of implementation.
+          </p>
+        </div>
+        <div class="processes__main js-processes">
+          {#
+          <div class="processes__path js-pathes">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="287.5px"
+              height="965.5px"
+            >
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,0.498 C1.500,0.498 12.706,86.177 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "
+              />
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,320.498 C1.500,320.498 12.705,234.934 82.491,195.667 C154.650,155.065 285.469,160.715 285.469,160.715 "
+              />
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,324.498 C1.500,324.498 12.706,410.178 82.500,449.498 C154.667,490.155 285.500,484.498 285.500,484.498 "
+              />
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,644.498 C1.500,644.498 12.705,558.934 82.491,519.667 C154.650,479.066 285.469,484.715 285.469,484.715 "
+              />
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,643.498 C1.500,643.498 12.706,729.178 82.500,768.498 C154.667,809.155 285.500,803.498 285.500,803.498 "
+              />
+              <path
+                fill-rule="evenodd"
+                stroke="rgb(145, 200, 76)"
+                stroke-width="1px"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                opacity="0.502"
+                fill="none"
+                d="M1.500,963.498 C1.500,963.498 12.705,877.935 82.491,838.668 C154.650,798.065 285.469,803.715 285.469,803.715 "
+              />
+            </svg>
+          </div>
+          #} {% for item in processes %}
+          <div
+            class="process process_{{item.modifier}}"
+            data-process="{{loop.index}}"
+          >
+            <div class="process__icons">
+              <span class="process__circle-inner" data-icon-circle-inner></span>
+              <span class="process__circle-outer" data-icon-circle-outer></span>
+              <span class="process__icon" data-icon>{{
+                mixins.icon(item.icon)
+              }}</span>
+              <div class="process__motion-el" data-motion-el></div>
+              <div class="process__path">{{ item.path | safe }}</div>
+            </div>
+            <div class="process__text">
+              <h3 class="process__title" data-title>{{ item.title }}</h3>
+              <div class="process__descr" data-descr>{{ item.text }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-3">
+        {{ mixins.megaTitle({ num: "6", text: "process", modifier: "true" }) }}
+      </div>
+    </div>
+  </div>
+</section>

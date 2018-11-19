@@ -124,13 +124,11 @@
         +circle(12)
         background-color: $green
         z-index: $z-2
-        opacity: 0
     &__circle-outer
         +vcenter
         +circle(26)
         z-index: $z-1
         background-color: rgba($green, 0.3)
-        opacity: 0
     &__icon-circles
         top: 0
         left: 50%
@@ -139,36 +137,34 @@
         +circle(50)
         +vcenter
         background-color: $green
-        opacity: 0
     &__icon-circle-outer
         +circle(66)
         +vcenter
         background-color: rgba($green, 0.2)
-        opacity: 0
     &__icon
         +vcenter
         font-size: 0
-        opacity: 0
         .icon
             color: $white
             font-size: 20px
-    &__dashed-line
+    &__line-wrapper
         position: absolute
-        opacity: 0
         top: 0
         bottom: 0
-        transform: translate(-50%, 100%)
+        transform: translateX(-50%)
         left: 50%
-        background-image: linear-gradient(to bottom, $green 50%,  transparent 50%)
-        background-size: 3px 3px 
         height: 100%
         width: 1px
         overflow: hidden
-        
-    &__line
+    &__line-dashed
         +coverdiv
-        left: 0
-        width: 1px
+        transform: translateY(100%)
+        background-image: linear-gradient(to bottom, $green 50%,  transparent 50%)
+        background-size: 3px 3px 
+        z-index: $z-1
+    &__line-solid
+        +coverdiv
+        // left: 0
         background-color: $green
         transform: translateY(100%)
         z-index: $z-2

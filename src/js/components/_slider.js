@@ -64,12 +64,12 @@ DOC.ready(() => {
     }
 
     function animateMark(el) {
-      const innerCircle = el.querySelector('[data-mark-circle-inner]');
-      const outerCircle = el.querySelector('[data-mark-circle-outer]');
-      const innerIconCircle = el.querySelector('[data-mark-icon-circle-inner]');
-      const outerIconCircle = el.querySelector('[data-mark-icon-circle-outer]');
-      const icon = el.querySelector('[data-mark-icon]');
-      const line = el.querySelector('[data-mark-line]');
+      const innerCircle = el.querySelector('[data-circle-inner]');
+      const outerCircle = el.querySelector('[data-circle-outer]');
+      const innerIconCircle = el.querySelector('[data-icon-circle-inner]');
+      const outerIconCircle = el.querySelector('[data-icon-circle-outer]');
+      const icon = el.querySelector('[data-icon]');
+      const line = el.querySelector('[data-mark-solid-line]');
       const dashedLine = el.querySelector('[data-mark-dashed-line]');
       const text = el.querySelector('.js-slider-text');
 
@@ -94,8 +94,8 @@ DOC.ready(() => {
           targets: line,
           opacity: 1,
           translateY: ['100%', '0%'],
-          duration: 1000
-          // delay: '-=200'
+          duration: 1000,
+          offset: '-=200'
         })
         .add({
           targets: innerIconCircle,

@@ -21,16 +21,16 @@ DOC.ready(() => {
     var el = $(el);
     var parent = el.closest('[data-detail]')[0];
     if (!parent) return false;
-    console.log(parent);
-    var circleInner = parent.querySelector('[data-detail-circle-inner]');
-    var circleOuter = parent.querySelector('[data-detail-circle-outer]');
+
+    var circleInner = parent.querySelector('[data-circle-inner]');
+    var circleOuter = parent.querySelector('[data-circle-outer]');
     var line = parent.querySelector('[data-detail-line]');
     var text = parent.querySelector('[data-detail-text]');
     var box = el[0];
 
     var h = el.outerHeight();
-
     var elementWatcher = scrollMonitor.create(el, -h / 4);
+
     elementWatcher.enterViewport(function() {
       if (el.hasClass('is-animated')) return false;
       var tl = anime.timeline({ easing: 'linear' });
