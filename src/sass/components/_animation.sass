@@ -1,13 +1,13 @@
 [data-anim-from]
 	position: relative
 	opacity: 0
-	transition: opacity $longTr, transform $longTr
+	transition: opacity 1s, transform 1.2s
 	&.is-active
 		transform: translate(0)
 		opacity: 1
 	
 [data-anim-from="bottom"]
-	transform: translateY(50px)
+	transform: translateY(100px)
 
 [data-anim-from="right"]
 	transform: translateX(50px)
@@ -28,7 +28,8 @@
 [data-circle-outer],
 [data-icon-circle-inner],
 [data-icon-circle-outer],
-[data-icon]
+[data-icon],
+[data-motion-el]
 	opacity: 0
 
 [data-title-number],

@@ -2,13 +2,14 @@
     display: flex
     flex-wrap: wrap
     &__item
-        +flex-size(50%)
+        +flex-size(284px)
         padding-left: 4px
+        margin-bottom: 4px
         position: relative
         &:before
             position: absolute
             content: ''
-            top: 0
+            top: 20px
             left: 0
             height: 48px
             width: 42px
@@ -26,12 +27,16 @@
         color: $blue
     &__feature
         display: inline-block
-        margin-top: 60px
+        margin-top: 70px
         vertical-align: top
         line-height: normal
+        &_mod
+            margin-top: 60px
 
 .about
     .list-title
-        margin: 90px 0 39px
-    .title
-        margin-bottom: 4px
+        margin-bottom: 21px
+    &__descr
+        max-width: 490px
+    // .title
+    //     margin-bottom: 4px

@@ -1,5 +1,5 @@
 .hero
-    height: calc(100vh - 127px)
+    height: calc(100vh - 117px)
     width: 100%
     display: flex
     justify-content: center
@@ -18,10 +18,12 @@
         justify-content: space-between
         align-items: stretch
         // +icenter
-        width: 1000px
-        padding: 0 20px
+        max-width: 1000px
+        width: 100%
+        padding: 0 25px
         margin: 0 auto
-        
+        margin-top: -20px
+
     &__logo
         +flex-size(50%)
         text-align: left
@@ -36,17 +38,16 @@
         padding-left: 41px
         margin-top: 108px
         margin-bottom: 33px
-        &:before 
-            content: ''
-            position: absolute
-            top: 0
-            bottom: 0
-            left: 0
-            height: 100%
-            border-left: 5px solid $white
-            border-top: 5px solid transparent
-            border-bottom: 5px solid transparent
-            width: 0
+    &__divider 
+        position: absolute !important
+        top: 0
+        bottom: 0
+        left: 0
+        height: 100%
+        border-left: 6px solid $white
+        border-top: 5px solid transparent
+        border-bottom: 5px solid transparent
+        width: 0
     &__title
         font-size: 60px
         font-weight: bold
@@ -60,9 +61,12 @@
         font-weight: 300
         letter-spacing: 9.6px
         color: rgba($white, 0.5)
+        text-transform: uppercase
+    &__cta
+        padding-left: 41px
     &__btn
         display: inline-block
-        padding: 10px 42px
+        padding: 10px 38px 11px 42px
         font-size: 0
         color: $white
         background: linear-gradient(to bottom, #e2242a, #d31a20)
@@ -73,29 +77,31 @@
             font-size: 14px
             text-transform: uppercase
             line-height: 2.14
-            letter-spacing: 1.4px
+            letter-spacing: 0.15em
             text-align: center
         .icon
             font-size: 23px
             margin-right: 12px
     &__down
         position: absolute
-        bottom: 10%
+        bottom: 4%
         left: 50%
         transform: translateX(-50%)
 
 .mouse-down-btn
     color: $white
     position: relative
-    .icon-mouse
-        font-size: 28px
+    .icon-mouse_1
+        font-size: 27px
         margin-bottom: 10px
-    .icon-arrow-down
+    .icon-download
         position: absolute
-        top: calc(100% + 5px)
+        top: calc(100% - 5px)
         left: 50%
         transform: translate(-50%, 0)
         animation: flow 2s alternate infinite both linear
+        font-size: 15px
+        font-weight: 300
 
 @keyframes flow
     from 

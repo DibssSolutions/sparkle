@@ -3,26 +3,29 @@
     z-index: $zS
     margin-top: 100px
     height: 120px
-    width: 100%
+    width: calc(100% + 15px)
     &__box
-        padding: 30px 40px
+        padding: 0 60px 0 40px
         position: absolute
         top: 0
         left: 0
         width: 100%
+        height: 120px
         border-left: 8px solid $dark_green
         border-radius: 3px
         box-shadow: -3px 0px 7px 0 rgba(0, 0, 0, 0.15)
         background-color: $green
         transform: scaleX(0)
         transform-origin: 0 0
+        +vertical
+        text-align: left
         &:after
             position: absolute
             top: 0
             bottom: 0
             right: 0
             width: 20px
-            background-image: repeating-linear-gradient(45deg, rgba($black, 0.2), rgba($black, 0.2) 4px,  transparent 4px,transparent 10px)
+            background-image: repeating-linear-gradient(45deg, rgba($black, 0.2), rgba($black, 0.2) 2px,  transparent 2px,transparent 6px)
             content: ''
     &__circles
         position: absolute
@@ -37,74 +40,139 @@
         +circle(26)
         z-index: $z-1
         background-color: rgba($green, 0.3)
+    .details__line-wrapper
+        position: absolute
+        right: 100%
+        height: 2px
+        width: 100%
+        // transform: rotate(3deg) 
+        transform-origin: 0 0 
+        overflow: hidden
+    .details__line
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-color: $green
+        transform: translateX(-105%)
+        transform-origin: 0 0
     &__line
         .is-active &
             transform: scale(1)
     &__text
+        +icenter
         opacity: 0
-
+        font-size: 18px
+        line-height: 1.44
+        color: $white
+        letter-spacing: 0.03em
 
 [data-detail="1"]
-    // margin-top: 200px
-    // margin-bottom: 300px
-
-    .details__circles
-        top: 45px
-        left: -295px
-    .details__line-wrapper
-        position: absolute
-        top: 43px
-        left: -293px
-        right: 100%
-        // width: 294px
-        height: 3px
-        transform: rotate(3deg) 
-        transform-origin: 0 0 
-        overflow: hidden
-    .details__line
-        position: absolute
-        top: 0
-        left: 0
-        height: 100%
-        width: 100%
-        background-color: $green
-        transform: translateX(-105%)
-        // transition: transform 2s
-        transform-origin: 0 0
-    &:hover
-        .details__line
-            transform: translateX(0)
+    margin-top: 200px
+    .details
+        &__circles
+            top: -164px
+            left: -224px
+        &__line-wrapper
+            top: -164px
+            left: -224px
+            transform: rotate(44deg) 
 
 [data-detail="2"]
-    // margin-top: 200px
-    // margin-bottom: 300px
+    margin-top: 93px
 
+[data-detail="3"]
+    margin-top: 228px
+
+[data-detail="4"]
+    margin-top: 182px
+    .details
+        &__circles
+            top: -187px
+            left: -428px
+        &__line-wrapper
+            top: -188px
+            left: -428px
+            transform: rotate(30deg) 
+            width: 150%
+
+[data-detail="5"]
+    margin-top: 87px
     .details__circles
-        top: 45px
-        left: -295px
+        top: 60px
+        left: -160px
     .details__line-wrapper
-        position: absolute
-        top: 43px
-        left: -293px
-        right: 100%
-        // width: 294px
-        height: 3px
-        transform: rotate(3deg) 
-        transform-origin: 0 0 
-        overflow: hidden
-    .details__line
-        position: absolute
-        top: 0
-        left: 0
-        height: 100%
-        width: 100%
-        background-color: $green
-        transform: translateX(-105%)
-        // transition: transform 2s
-        transform-origin: 0 0
-    &:hover
-        .details__line
-            transform: translateX(0)
+        top: 59px
+        left: -160px
+        transform: rotate(1deg) 
+
+[data-detail="6"]
+    margin-top: 111px
+    .details
+        &__circles
+            top: -209px
+            left: -476px
+        &__line-wrapper
+            top: -208px
+            left: -476px
+            width: 150%
+            transform: rotate(29.5deg)
+
+[data-detail="7"]
+    margin-top: 151px
+    .details
+        &__circles
+            top: -98px
+            left: -273px
+        &__line-wrapper
+            top: -97px
+            left: -273px
+            transform: rotate(29.5deg)
+
+[data-detail="8"]
+    margin-top: 76px
+
+[data-detail="9"]
+    margin-top: 122px
+
+[data-detail="10"]
+    margin-top: 253px
+
+[data-detail="11"]
+    margin-top: 390px
+
+[data-detail="12"]
+    margin-top: 158px
+
+[data-detail="13"]
+    margin-top: 58px
+    .details
+        &__circles
+            top: 55px
+            left: -328px
+        &__line-wrapper
+            top: 54px
+            left: -328px
+            // transform: rotate(2deg)
+
+[data-detail="2"],
+[data-detail="3"],
+[data-detail="8"],
+[data-detail="9"],
+[data-detail="10"],
+[data-detail="11"],
+[data-detail="12"]
+    .details__circles
+        // top: 60px
+        top: 40%
+        left: -50%
+        // left: -108px
+    .details__line-wrapper
+        top: 59px
+        left: -108px
+        width: 30%
+        // transform: rotate(1deg) 
 
 .mark
     position: absolute

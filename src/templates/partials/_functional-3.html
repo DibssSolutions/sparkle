@@ -24,8 +24,15 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <div class="functional__image-1">
+                <svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="svgBlur_1" x="-5%" y="-5%" width="110%" height="110%">
+                        <fegaussianblur in="SourceGraphic" stddeviation="5"/>
+                    </filter>
+                </svg>
+                <div class="functional__images">
                     <img src="img/functional_1.png" alt="functional_1">
+                    <img src="img/functional_1.png" alt="functional_1" class="functional__image-faded">
+                    <img src="img/functional_1.png" alt="functional_1" class="functional__image-blurred">
                 </div>
                 <h5 class="list-title functional__list-title-2">
                     Project page. Section “Apartments planning”

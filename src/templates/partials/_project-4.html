@@ -1,8 +1,7 @@
 <section class="project section">
     <div class="project__inner container-inner">
         <div class="row">
-
-            <div class="col-7">
+            <div class="col-9">
                 <h3 class="title">
                     Project page
                 </h3>
@@ -11,35 +10,40 @@
                         The most important page of the site, stuffed with functionality and perfectly verified by design. It is more detailed below.
                     </p>
                 </div>
-
+            </div>
+            <div class="col-3">
+                {{mixins.megaTitle({ num: '4', text: "project page", modifier: true })}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
                 <div class="project__image">
                     <img src="img/project-img.png" alt="project">
                 </div>
-
             </div>
-            <div class="col-5">
-                {{mixins.megaTitle({ num: '4', text: "project page", modifier: true })}}
+            <div class="col-4">
                 {% for item in [
-                    'Phone number changes according to location and user`search 
-                    request',
-                    'Each construction stage is a separate page',
-                    'Numerical indicators of the construction odject',
-                    'Description of the construction object',
-                    'Pre-entry form for viewing apartments',
-                    'Conveniently shown prices and terms of delivery of the construction object',
-                    'Unique icons for the project',
-                    'Photos of construction progress',
-                    'General plan of the construction object',
-                    'Planning of apartments of any floor of the building object',
-                    'Pop-up with the scheme of any floor of this project',
-                    'Feedback form for consultation with experts',
-                    'Phone number changes according to location and user`search 
-                    request'
-                ] %}
+                        'Phone number changes according to location and user`search 
+                        request',
+                        'Each construction stage is a separate page',
+                        'Numerical indicators of the construction odject',
+                        'Description of the construction object',
+                        'Pre-entry form for viewing apartments',
+                        'Conveniently shown prices and terms of delivery of the construction object',
+                        'Unique icons for the project',
+                        'Photos of construction progress',
+                        'General plan of the construction object',
+                        'Planning of apartments of any floor of the building object',
+                        'Pop-up with the scheme of any floor of this project',
+                        'Feedback form for consultation with experts',
+                        'Phone number changes according to location and user`search 
+                        request'
+                    ] %}
                     {{mixins.detail({number: loop.index, text: item})}}
                 {% endfor %}
             </div>
         </div>
     </div>
+</div>
 
 </section>

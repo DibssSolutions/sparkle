@@ -14,11 +14,12 @@
         left: 0
 
 .process
-    max-width: 400px
+    max-width: 470px
     display: flex
     position: relative
+    margin-bottom: 56px
     &_right
-        margin-left: auto
+        margin-left: 285px
     &__icons
         position: relative
         +flex-size(100px)
@@ -36,18 +37,27 @@
         +vcenter
         color: $white
         font-size: 0
+        z-index: $z-2
         .icon
             font-size: 30px
     &__motion-el
-        +circle(10)
+        +circle(20)
         background-color: red
         position: absolute
-        top: 50px
-        left: 50px
+        top: 40px
+        left: 40px
+        // transform: translateX(0) 
+        // .process_right &
+        //     left: auto
+        //     right: 50px
     &__path
         position: absolute
         top: 50px
         left: 50px
+        // z-index: 1
+        .process_right &
+            left: auto
+            right: 50px
         svg
             fill-rule: evenodd
             stroke: rgb(145, 200, 76)
@@ -56,4 +66,20 @@
             stroke-linejoin: miter
             opacity: 0.502
             fill: none
+        path
+            stroke-dasharray: 362px
+            stroke-dashoffset: 362px
+    &__text
+        margin-left: 30px
+    &__title
+        font-size: 20px
+        font-weight: 300
+        line-height: 1.7
+        letter-spacing: 1.6px
+        color: #202020
+    &__descr
+        font-size: 18px
+        font-weight: 300
+        line-height: 1.33
+        color: $grey
 

@@ -2,7 +2,7 @@
     position: relative
     display: inline-block
     margin-left: -15px
-    margin-top: 42px
+    margin-top: 38px
     &__line
         position: absolute
         top: 112%
@@ -39,7 +39,7 @@
         color: $grey
         z-index: $z-3
         transform-origin: 100% 100%
-        .block-title_rotated & 
+        &_to-bottom
             transform: rotate(90deg) translate(100%, 100%) 
 
 .title
@@ -53,7 +53,7 @@
 .list-title
     position: relative
     padding-left: 60px
-    margin-bottom: 32px
+    margin-bottom: 19px
     max-width: 575px
     font-size: 26px
     line-height: 1.31
@@ -73,7 +73,7 @@
     padding-left: 60px
     &__item
         position: relative
-        margin-bottom: 16px
+        margin-bottom: 10px
         &:before
             position: absolute
             top: calc(50% - 4px)
@@ -81,3 +81,6 @@
             +circle(8)
             background-color: $blue
             content: ''
+
+.text-right
+    text-align: right

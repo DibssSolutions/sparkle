@@ -8,7 +8,7 @@
         modifier: 'left',
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
-            <path d="M1.500,0.498 C1.500,0.498 12.706,86.177 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.177 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 " data-motion-path/>
         </svg>'
     },
     {
@@ -20,7 +20,8 @@
         modifier: 'right', 
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
-            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.935 284.469,1.715 284.469,1.715 "/>
+            <path d="M284.5,1.7c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8"/>
+            <path d="M0,0c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8" data-motion-path/>
         </svg>'
     },
     {
@@ -32,7 +33,7 @@
         modifier: 'left',
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
-            <path d="M1.500,0.498 C1.500,0.498 12.706,86.178 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.178 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 " data-motion-path/>
         </svg>'
     },
     {
@@ -44,7 +45,8 @@
         modifier: 'right',
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
-            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.934 284.469,1.715 284.469,1.715 "/>
+            <path d="M284.5,1.7c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8"/>
+            <path d="M0,0c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8" data-motion-path/>
         </svg>'
     },
     {
@@ -56,7 +58,7 @@
         modifier: 'left',
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
-            <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.934 284.469,1.715 284.469,1.715 "/>
+            <path d="M1.500,0.498 C1.500,0.498 12.706,86.177 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 " data-motion-path/>
         </svg>'
     },
     {
@@ -68,17 +70,14 @@
         modifier: 'right',
         path: '
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287.5px" height="163.5px">
-            <path d="M1.500,0.498 C1.500,0.498 12.706,86.178 82.500,125.498 C154.667,166.155 285.500,160.498 285.500,160.498 "/>
+            <path d="M284.5,1.7c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8"/>
+            <path d="M0,0c0,0-130.8-5.6-203,35c-69.8,39.2-81,124.8-81,124.8" data-motion-path/>
         </svg>'
     },
     {
         icon: 'gem',
         title: 'The project is completed!',
-        modifier: 'left',
-        path: '
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.5px" height="163.5px">
-            <path d="M0.500,161.498 C0.500,161.498 11.705,75.935 81.491,36.668 C153.650,-3.935 284.469,1.715 284.469,1.715 "/>
-        </svg>'
+        modifier: 'left'
     }
 
 ] %}
@@ -176,8 +175,12 @@
               <span class="process__icon" data-icon>{{
                 mixins.icon(item.icon)
               }}</span>
-              <div class="process__motion-el" data-motion-el></div>
-              <div class="process__path">{{ item.path | safe }}</div>
+
+              {% if item.path  %}
+                <div class="process__motion-el" data-motion-el></div>
+                <div class="process__path">{{ item.path | safe }}</div>
+              {% endif %}
+              
             </div>
             <div class="process__text">
               <h3 class="process__title" data-title>{{ item.title }}</h3>
@@ -193,3 +196,7 @@
     </div>
   </div>
 </section>
+{# M153.650,-3.935
+                      C153.650,-3.935 284.469,1.715 284.469,1.715
+                      C81.491,36.667 11.705,75.934  0.500,161.498 #}
+                      {# <path d="M0.500,161.498 C0.500,161.498 11.705,75.934 81.491,36.667 C153.650,-3.935 284.469,1.715 284.469,1.715 "/> #}

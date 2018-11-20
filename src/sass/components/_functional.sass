@@ -1,6 +1,29 @@
 .functional
-    &__image-1
-        margin-top: 52px
+    &.section
+        padding-bottom: 30px
+    &__images
+        margin-top: 46px
+        img
+            display: block
+            position: relative
+            &:first-child
+                z-index: $z-2
+    &__image-faded
+        z-index: $z-1
+        // margin-top: calc(55px - 100%)
+        margin-top: -282px
+        opacity: 0.5
+    &__image-blurred
+        margin-top: -282px
+        opacity: 0.7
+        filter: url(#svgBlur_1)
+        z-index: -1
     &__list-title-2
-        margin-bottom: 50px
+        margin-bottom: 32px
         margin-top: 140px
+    .list-title
+        max-width: inherit
+        margin-right: -10px
+    &__image-2
+        margin-top: 18px
+        margin-left: -11px

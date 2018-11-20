@@ -8,7 +8,7 @@
                 <h3 class="title">
                     About project riel
                 </h3>
-                <div class="section-descr">
+                <div class="section-descr about__descr">
                     <p>
                         Task: to create corporate website for development corporation – leader of real estate market in Lviv city Ukraine
                     </p>
@@ -24,7 +24,8 @@
                             feature: 'user scripts'
                         }, {
                             num: 20,
-                            feature: 'prototypes of <br>unique pages'
+                            feature: 'prototypes of <br>unique pages',
+                            mod: true
                         }, {
                             num: 4,
                             feature: 'concepts <br>of design'
@@ -35,7 +36,7 @@
                     ] %}
                         <li class="created-list__item">
                             <span class="created-list__number">{{item.num}}</span>
-                            <span class="created-list__feature">{{item.feature | safe}}</span>
+                            <span class="created-list__feature{% if item.mod %} created-list__feature_mod{% endif %}">{{item.feature | safe}}</span>
                         </li>
                     {% endfor %}
                 </ul>
