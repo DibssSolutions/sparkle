@@ -1,20 +1,20 @@
-<section class="about section">
+<section class="about section" data-anim-parent>
     <div class="about__inner container-inner">
         <div class="row">
             <div class="col-5">
                 {{mixins.megaTitle({ num: '1', text: "about" })}}
             </div>
             <div class="col-7">
-                <h3 class="title">
+                <h3 class="title" data-anim-from="right">
                     About project riel
                 </h3>
-                <div class="section-descr about__descr">
+                <div class="section-descr about__descr" data-anim-from="right">
                     <p>
                         Task: to create corporate website for development corporation – leader of real estate market in Lviv city Ukraine
                     </p>
                 </div>
 
-                <h5 class="list-title">
+                <h5 class="list-title" data-anim-from="opacity">
                     our team created:
                 </h5>
                 <ul class="created-list">
@@ -34,8 +34,8 @@
                             feature: 'unique UX blocks'
                         }
                     ] %}
-                        <li class="created-list__item">
-                            <span class="created-list__number">{{item.num}}</span>
+                        <li class="created-list__item" data-numbers-list>
+                            <span class="created-list__number" data-list-number="{{item.num}}">0</span>
                             <span class="created-list__feature{% if item.mod %} created-list__feature_mod{% endif %}">{{item.feature | safe}}</span>
                         </li>
                     {% endfor %}

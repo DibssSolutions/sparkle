@@ -1,52 +1,70 @@
-<section class="functional section">
-    <div class="functional__inner container-inner">
-        <div class="row">
-            <div class="col-5">
-                {{mixins.megaTitle({ num: '3', text: "functional" })}}
-            </div>
-            <div class="col-7">
-                <h3 class="title">
-                    Functional of project
-                </h3>
-                <div class="section-descr">
-                    <p>
-                        The high level of functionality makes the site effective
-                    </p>
-                </div>
-
-                <h5 class="list-title">
-                    Main screen. Slider landing.
-                </h5>
-                <ul class="list">
-                    {% for item in["The screens are switched with scrolling of the mouse wheel.", "Animated screen transition."] %}
-                        <li class="list__item">
-                            {{item}}
-                        </li>
-                    {% endfor %}
-                </ul>
-                <svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
-                    <filter id="svgBlur_1" x="-5%" y="-5%" width="110%" height="110%">
-                        <fegaussianblur in="SourceGraphic" stddeviation="5"/>
-                    </filter>
-                </svg>
-                <div class="functional__images">
-                    <img src="img/functional_1.png" alt="functional_1">
-                    <img src="img/functional_1.png" alt="functional_1" class="functional__image-faded">
-                    <img src="img/functional_1.png" alt="functional_1" class="functional__image-blurred">
-                </div>
-                <h5 class="list-title functional__list-title-2">
-                    Project page. Section “Apartments planning”
-                </h5>
-                <ul class="list">
-                    <li class="list__item">
-                        2D and 3D representations of plan alternate each other
-                    </li>
-                </ul>
-                <div class="functional__image-2">
-                    <img src="img/functional_2.png" alt="functional_2">
-                </div>
-            </div>
+<section class="functional section js-sticky-parent" data-anim-parent>
+  <div class="functional__inner container-inner">
+    <div class="row">
+      <div class="col-5">
+        <div class="functional__sticky-wrapper js-sticky">
+          <div class="functional__sticky">
+            {{ mixins.megaTitle({ num: '3', text: 'functional' }) }}
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="col-7">
+        <h3 class="title" data-anim-from="right">Functional of project</h3>
+        <div class="section-descr" data-anim-from="right">
+          <p>The high level of functionality makes the site effective</p>
+        </div>
 
+        <h5 class="list-title" data-anim-from="bottom">
+          Main screen. Slider landing.
+        </h5>
+        <ul class="list">
+          {% for item in["The screens are switched with scrolling of the mouse
+          wheel.", "Animated screen transition."] %}
+          <li class="list__item" data-anim-from="bottom">{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <svg
+          style="position: absolute; top: -99999px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <filter id="svgBlur_1" x="-5%" y="-5%" width="110%" height="110%">
+            <fegaussianblur in="SourceGraphic" stddeviation="5" />
+          </filter>
+        </svg>
+        <div class="functional__images">
+          <img
+            src="img/functional_1.png"
+            alt="functional_1"
+            data-anim-from="right"
+            data-rellax-speed="3"
+          />
+          <img
+            src="img/functional_1.png"
+            alt="functional_1"
+            class="functional__image-faded"
+            data-anim-from="right"
+            data-rellax-speed="2"
+          />
+          <img
+            src="img/functional_1.png"
+            alt="functional_1"
+            class="functional__image-blurred"
+            data-anim-from="right"
+            data-rellax-speed="1"
+          />
+        </div>
+        <h5 class="list-title functional__list-title-2">
+          Project page. Section “Apartments planning”
+        </h5>
+        <ul class="list">
+          <li class="list__item">
+            2D and 3D representations of plan alternate each other
+          </li>
+        </ul>
+        <div class="functional__image-2">
+          <img src="img/functional_2.png" alt="functional_2" />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

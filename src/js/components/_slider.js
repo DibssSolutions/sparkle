@@ -1,6 +1,7 @@
 import slick from 'slick-carousel';
 import anime from 'animejs';
-import { BODY, DOC, WIN, INIT, widthMD, widthSM } from '../constants';
+var scrollMonitor = require('scrollmonitor');
+import { BODY, DOC, WIN, INIT, widthMD, widthSM, ACTIVE } from '../constants';
 import { buildIcon } from '../utils';
 
 // ============== OFFERS SLIDER ====================
@@ -10,22 +11,34 @@ DOC.ready(() => {
   slider.each((i, el) => {
     let slider = $(el);
 
-    slider.on('init', () => {
+    slider.on('init', function(event, slick) {
       slider.addClass(INIT);
+      // setTimeout(() => {
+      //   var firstSlide = slick.$slides.get(0);
+      //   animateEnter(firstSlide);
+      // }, 400);
+    });
+
+    var elementWatcher = scrollMonitor.create(slider, -200);
+    elementWatcher.enterViewport(function() {
+      // animateEnter(firstSlide);
     });
 
     slider.on('afterChange', (event, slick, currentSlide) => {
-      // PAUSE ALL VIDEOS
       let el = slick.$slides.get(currentSlide);
       animateEnter(el);
-      console.log(el);
+    });
+
+    slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+      let el = slick.$slides.get(currentSlide);
+      animateExit(el);
     });
 
     slider.slick({
       dots: false,
       infinite: false,
       speed: 1800,
-      //   fade: true,
+      fade: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       // autoplay: true,
@@ -56,6 +69,8 @@ DOC.ready(() => {
     });
 
     function animateEnter(el) {
+      const text = el.querySelector('.js-slider-text');
+      text.classList.add(ACTIVE);
       const marks = el.querySelectorAll('[data-mark]');
       const marksArr = [].slice.call(marks);
       marksArr.forEach((mark, index) => {
@@ -63,16 +78,50 @@ DOC.ready(() => {
       });
     }
 
-    function animateMark(el) {
-      const innerCircle = el.querySelector('[data-circle-inner]');
-      const outerCircle = el.querySelector('[data-circle-outer]');
-      const innerIconCircle = el.querySelector('[data-icon-circle-inner]');
-      const outerIconCircle = el.querySelector('[data-icon-circle-outer]');
-      const icon = el.querySelector('[data-icon]');
-      const line = el.querySelector('[data-mark-solid-line]');
-      const dashedLine = el.querySelector('[data-mark-dashed-line]');
+    function animateExit(el) {
       const text = el.querySelector('.js-slider-text');
+      text.classList.remove(ACTIVE);
+      const marks = el.querySelectorAll('[data-mark]');
+      const marksArr = [].slice.call(marks);
+      marksArr.forEach((mark, index) => {
+        // setTimeout(() => animateExitMark(mark), index * 1000);
+      });
+    }
 
+    // class Mark {
+    //   constructor()
+    // }
+    function selectors(el) {
+      innerCircle = el.querySelector('[data-circle-inner]');
+      outerCircle = el.querySelector('[data-circle-outer]');
+      innerIconCircle = el.querySelector('[data-icon-circle-inner]');
+      outerIconCircle = el.querySelector('[data-icon-circle-outer]');
+      icon = el.querySelector('[data-icon]');
+      line = el.querySelector('[data-mark-solid-line]');
+      dashedLine = el.querySelector('[data-mark-dashed-line]');
+      text = el.querySelector('.js-slider-text');
+      return {
+        innerCircle,
+        outerCircle,
+        innerIconCircle,
+        outerIconCircle,
+        icon,
+        line,
+        dashedLine,
+        text
+      };
+    }
+
+    function animateMark(el) {
+      // const innerCircle = el.querySelector('[data-circle-inner]');
+      // const outerCircle = el.querySelector('[data-circle-outer]');
+      // const innerIconCircle = el.querySelector('[data-icon-circle-inner]');
+      // const outerIconCircle = el.querySelector('[data-icon-circle-outer]');
+      // const icon = el.querySelector('[data-icon]');
+      // const line = el.querySelector('[data-mark-solid-line]');
+      // const dashedLine = el.querySelector('[data-mark-dashed-line]');
+      // const text = el.querySelector('.js-slider-text');
+      selectors(el);
       var tl = anime.timeline({ easing: 'linear' });
       tl.add({
         targets: innerCircle,

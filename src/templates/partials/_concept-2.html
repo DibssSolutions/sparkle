@@ -1,22 +1,33 @@
-<section class="concept section">
-    <div class="concept__inner container-inner">
-        <div class="row">
-            <div class="col-9">
-                <h3 class="title">
-                    design-concept
-                </h3>
-                <div class="concept__descr section-descr">
-                    <p>
-                        Fully responsive layout. Excellent functionality and high performance
-                    </p>
-                </div>
-                <div class="concept__image">
-                    <img src="img/concept.png" alt="concept image">
-                </div>
-            </div>
-            <div class="col-3">
-                {{mixins.megaTitle({ num: '2', text: "concept", modifier: 'true' })}}
-            </div>
+<section class="concept section" data-anim-parent>
+  <div class="concept__inner container-inner">
+    <div class="row" data-concept-trigger>
+      <div class="col-9">
+        <h3 class="title" data-anim-from="left">design-concept</h3>
+        <div class="concept__descr section-descr" data-anim-from="left">
+          <p>
+            Fully responsive layout. Excellent functionality and high
+            performance
+          </p>
         </div>
+        <div
+          class="concept__monitor"
+          style="background-image: url(img/iMac.png);"
+          data-concept-mask
+        >
+          <div class="concept__image-wrapper" data-concept-drag-container>
+            <img
+              class="concept__image"
+              src="img/concept_bg.jpg"
+              alt="concept image"
+              data-concept-image
+              {# draggable="true" #}
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        {{ mixins.megaTitle({ num: '2', text: 'concept', modifier: 'true' }) }}
+      </div>
     </div>
+  </div>
 </section>

@@ -1,11 +1,11 @@
-<section class="project section">
+<section class="project section" data-anim-parent>
     <div class="project__inner container-inner">
         <div class="row">
             <div class="col-9">
-                <h3 class="title">
+                <h3 class="title" data-anim-from="left">
                     Project page
                 </h3>
-                <div class="section-descr project__descr">
+                <div class="section-descr project__descr" data-anim-from="left">
                     <p>
                         The most important page of the site, stuffed with functionality and perfectly verified by design. It is more detailed below.
                     </p>
@@ -15,14 +15,9 @@
                 {{mixins.megaTitle({ num: '4', text: "project page", modifier: true })}}
             </div>
         </div>
-        <div class="row">
-            <div class="col-8">
-                <div class="project__image">
-                    <img src="img/project-img.png" alt="project">
-                </div>
-            </div>
-            <div class="col-4">
-                {% for item in [
+        <div class="project__main">
+            <img class="project__image" src="img/project-img.png" alt="project" data-anim-from="bottom">
+            {% for item in [
                         'Phone number changes according to location and user`search 
                         request',
                         'Each construction stage is a separate page',
@@ -39,11 +34,8 @@
                         'Phone number changes according to location and user`search 
                         request'
                     ] %}
-                    {{mixins.detail({number: loop.index, text: item})}}
-                {% endfor %}
-            </div>
+                {{mixins.detail({number: loop.index, text: item})}}
+            {% endfor %}
         </div>
     </div>
-</div>
-
 </section>

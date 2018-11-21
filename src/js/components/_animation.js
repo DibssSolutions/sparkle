@@ -3,17 +3,21 @@ var scrollMonitor = require('scrollmonitor');
 import { BODY, DOC, WIN, INIT, widthMD, widthSM } from '../constants';
 
 DOC.ready(() => {
-  var scrollers = $('[data-anim-from]');
+  var scrollTriggers = $('[data-anim-parent]');
   var details = $('[data-detail-box]');
   var titles = $('[data-title]');
 
-  $(scrollers).each((index, el) => {
+  $(scrollTriggers).each((index, el) => {
     var el = $(el);
     var elementWatcher = scrollMonitor.create(el);
     elementWatcher.enterViewport(function() {
-      setTimeout(() => {
-        el.addClass('is-active');
-      }, index * 100);
+      var scrollers = el.find('[data-anim-from]');
+      $(scrollers).each((index, el) => {
+        var el = $(el);
+        setTimeout(() => {
+          el.addClass('is-active');
+        }, index * 100);
+      });
     });
   });
 

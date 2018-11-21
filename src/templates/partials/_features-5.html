@@ -1,23 +1,18 @@
 <section class="features section">
-    <div class="features__inner container-inner">
+    <div class="features__inner container-inner" data-anim-parent>
         <div class="row">
             <div class="col-5">
-                {{mixins.megaTitle({ num: '5', text: "Features" })}}
+                {{ mixins.megaTitle({ num: '5', text: 'Features' }) }}
             </div>
             <div class="col-7">
-                <h3 class="title">
-                    Features of the project
-                </h3>
-                <div class="section-descr">
-                    <p>
-                        The web site has a set of special features
-                    </p>
+                <h3 class="title" data-anim-from="right">Features of the project</h3>
+                <div class="section-descr" data-anim-from="right">
+                    <p>The web site has a set of special features</p>
                 </div>
 
-                <h5 class="list-title">
+                <h5 class="list-title" data-anim-from="bottom">
                     Adaptive functionality. It changes according to location and user’s search request
                 </h5>
-
             </div>
         </div>
     </div>
@@ -26,32 +21,28 @@
             <div class="slider__slide">
                 <div class="slider__marks">
                     {% for icon in ['bed', 'map-marker-alt', 'mobile-phone'] %}
-                        {{mixins.mark({number: loop.index, icon: icon})}}
+                        {{ mixins.mark({ number: loop.index, icon: icon }) }}
                     {% endfor %}
                 </div>
                 <ul class="list slider__text js-slider-text">
-                    <li class="list__item">
-                        User from Lviv, request “cheap property”
-                    </li>
+                    <li class="list__item">User from Lviv, request “cheap property”</li>
                 </ul>
                 <div class="slider__image" style="background-image: url(img/slider_img_1.png)"></div>
             </div>
             <div class="slider__slide">
                 <div class="slider__marks">
                     {% for icon in ['bed', 'map-marker-alt', 'mobile-phone'] %}
-                        {{mixins.mark({number: loop.index, icon: icon})}}
+                        {{ mixins.mark({ number: loop.index, icon: icon }) }}
                     {% endfor %}
                 </div>
                 <ul class="list slider__text js-slider-text">
-                    <li class="list__item">
-                        User from Kyiv, request “Lviv District”
-                    </li>
+                    <li class="list__item">User from Kyiv, request “Lviv District”</li>
                 </ul>
                 <div class="slider__image" style="background-image: url(img/build.png)"></div>
             </div>
         </div>
     </div>
-    
+
     <div class="features__admin-panel">
         <div class="admin">
             <div class="admin__images">
@@ -63,27 +54,21 @@
                     Administrative panel. Simple management of elements of the site.
                 </h5>
                 <ul class="list">
-                    {% for item in["Full management of site", "Intuitively understandable interface", "Editing of any fields and values on the site"] %}
-                        <li class="list__item" data-anim-from="bottom">
-                            {{item}}
-                        </li>
+                    {% for item in["Full management of site", "Intuitively understandable
+ interface ", " Editing of any fields and values on the site "] %}
+                        <li class="list__item" data-anim-from="bottom">{{ item }}</li>
                     {% endfor %}
                 </ul>
-
             </div>
         </div>
     </div>
     <div class="features__nomination">
         <div class="nomination">
             <div class="nomination__text">
-                <h3 class="title">
-                    winner in nomination 
-                </h3>
+                <h3 class="title">winner in nomination</h3>
                 <div class="subtitle">“Construction, real estate”</div>
             </div>
-            <div class="nomination__image" style="background-image: url(img/admin_right.jpg)">
-
-            </div>
+            <div class="nomination__image" style="background-image: url(img/admin_right.jpg)"></div>
         </div>
     </div>
 </section>

@@ -32,6 +32,12 @@
             left: 60px
     &__text
         margin-top: 100px
+        opacity: 0
+        transform: translateY(30px)
+        transition: opacity $tr, transform $longTr
+        &.is-active
+            opacity: 1
+            transform: translateY(0)
     &__image
         +cover
         padding-bottom: 630px

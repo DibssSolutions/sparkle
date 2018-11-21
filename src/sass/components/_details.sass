@@ -1,15 +1,15 @@
 .details
-    position: relative
-    z-index: $zS
-    margin-top: 100px
-    height: 120px
-    width: calc(100% + 15px)
+    // position: relative
+    // z-index: $zS
+    // margin-top: 100px
+    // height: 120px
+    // width: calc(100% + 15px)
     &__box
         padding: 0 60px 0 40px
         position: absolute
-        top: 0
-        left: 0
-        width: 100%
+        // top: 0
+        right: 0
+        width: 33%
         height: 120px
         border-left: 8px solid $dark_green
         border-radius: 3px
@@ -30,6 +30,7 @@
     &__circles
         position: absolute
         z-index: $zS
+        left: 57.2%
     &__circle-inner
         +vcenter
         +circle(12)
@@ -42,9 +43,10 @@
         background-color: rgba($green, 0.3)
     .details__line-wrapper
         position: absolute
-        right: 100%
+        right: 33%
+        left: 57.2%
         height: 2px
-        width: 100%
+        // width: 100%
         // transform: rotate(3deg) 
         transform-origin: 0 0 
         overflow: hidden
@@ -69,110 +71,141 @@
         letter-spacing: 0.03em
 
 [data-detail="1"]
-    margin-top: 200px
-    .details
-        &__circles
-            top: -164px
-            left: -224px
-        &__line-wrapper
-            top: -164px
-            left: -224px
-            transform: rotate(44deg) 
+    .details__circles
+        top: 1%
+        left: 47%
+    .details__line-wrapper
+        top: 1%
+        left: 47%
+        transform: rotate(44deg) 
+        width: 30%
+    .details__box
+        top: 5.3%
 
 [data-detail="2"]
-    margin-top: 93px
+    .details__box
+        top: 11.15%
+    .details__circles
+        top: 12.8%
+    .details__line-wrapper
+        top: 12.75%
+        width: 30%
 
 [data-detail="3"]
-    margin-top: 228px
+    .details__box
+        top: 20.65%
+    .details__circles
+        top: 22.2%
+    .details__line-wrapper
+        top: calc(22.2% - 1px)
 
 [data-detail="4"]
-    margin-top: 182px
-    .details
-        &__circles
-            top: -187px
-            left: -428px
-        &__line-wrapper
-            top: -188px
-            left: -428px
-            transform: rotate(30deg) 
-            width: 150%
+    .details__box
+        top: 28.7%
+    .details__circles
+        top: 23.7%
+        left: 29%
+    .details__line-wrapper
+        width: 44%
+        top: calc(23.7% - 1px)
+        left: 29%
+        transform: rotate(30deg)
 
 [data-detail="5"]
-    margin-top: 87px
+    .details__box
+        top: 34.44%
     .details__circles
-        top: 60px
-        left: -160px
+        top: 36.05%
+        left: 53%
     .details__line-wrapper
-        top: 59px
-        left: -160px
-        transform: rotate(1deg) 
+        top: calc(36.05% - 1px)
+        left: 53%
 
 [data-detail="6"]
-    margin-top: 111px
-    .details
-        &__circles
-            top: -209px
-            left: -476px
-        &__line-wrapper
-            top: -208px
-            left: -476px
-            width: 150%
-            transform: rotate(29.5deg)
+    .details__box
+        top: 40.7%
+    .details__circles
+        top: 35.1%
+        left: 24.2%
+    .details__line-wrapper
+        width: 49.5%
+        top: calc(35.1% - 1px)
+        left: 24.2%
+        transform: rotate(29deg)
 
 [data-detail="7"]
-    margin-top: 151px
-    .details
-        &__circles
-            top: -98px
-            left: -273px
-        &__line-wrapper
-            top: -97px
-            left: -273px
-            transform: rotate(29.5deg)
-
+    .details__box
+        top: 48.05%
+    .details__circles
+        top: 45.35%
+        left: 42.5%
+    .details__line-wrapper
+        top: calc(45.35% - 1px)
+        left: 42.5%
+        transform: rotate(30deg)
+        width: 29%
+ 
 [data-detail="8"]
-    margin-top: 76px
+    .details__box
+        top: 53.44%
+    .details__circles
+        top: 55.05%
+        left: 57.4%
+    .details__line-wrapper
+        top: calc(55.05% - 1px)
+        left: 57.4%
 
 [data-detail="9"]
-    margin-top: 122px
+    .details__box
+        top: 59.97%
+    .details__circles
+        top: 61.55%
+        left: 57.4%
+    .details__line-wrapper
+        top: calc(61.55% - 1px)
+        left: 57.4%
 
 [data-detail="10"]
-    margin-top: 253px
+    .details__box
+        top: 70%
+    .details__circles
+        top: 71.55%
+        left: 57.4%
+    .details__line-wrapper
+        top: calc(71.55% - 1px)
+        left: 57.4%
 
 [data-detail="11"]
-    margin-top: 390px
+    .details__box
+        top: 83.85%
+    .details__circles
+        top: 85.45%
+        left: 57.4%
+    .details__line-wrapper
+        top: calc(85.45% - 1px)
+        left: 57.4%
 
 [data-detail="12"]
-    margin-top: 158px
+    .details__box
+        top: 91.4%
+    .details__circles
+        top: 93%
+        left: 57.4%
+    .details__line-wrapper
+        top: calc(93% - 1px)
+        left: 57.4%
 
 [data-detail="13"]
-    margin-top: 58px
-    .details
-        &__circles
-            top: 55px
-            left: -328px
-        &__line-wrapper
-            top: 54px
-            left: -328px
-            // transform: rotate(2deg)
-
-[data-detail="2"],
-[data-detail="3"],
-[data-detail="8"],
-[data-detail="9"],
-[data-detail="10"],
-[data-detail="11"],
-[data-detail="12"]
+    .details__box
+        top: 96.22%
     .details__circles
-        // top: 60px
-        top: 40%
-        left: -50%
-        // left: -108px
+        top: 97.8%
+        left: 37.5%
     .details__line-wrapper
-        top: 59px
-        left: -108px
+        top: calc(97.8% - 1px)
+        left: 37.5%
+        
         width: 30%
-        // transform: rotate(1deg) 
 
 .mark
     position: absolute
@@ -222,18 +255,20 @@
         transform: translateX(-50%)
         left: 50%
         height: 100%
-        width: 1px
+        width: 2px
         overflow: hidden
     &__line-dashed
         +coverdiv
+        // width: 1px
         transform: translateY(100%)
         background-image: linear-gradient(to bottom, $green 50%,  transparent 50%)
         background-size: 3px 3px 
         z-index: $z-1
     &__line-solid
         +coverdiv
-        // left: 0
+        // width: 1px
         background-color: $green
+        
         transform: translateY(100%)
         z-index: $z-2
 
