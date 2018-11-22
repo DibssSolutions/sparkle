@@ -1,0 +1,113 @@
+[data-modal]
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	// padding-right: 20px
+	opacity: 0
+	visibility: hidden
+	+vertical
+	white-space: nowrap
+	+gpu
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	background-color: rgba($black, 0.5)
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 1000
+[data-modal-container]
+	position: relative
+	// padding: 80px 0 66px
+	z-index: 20
+	border-radius: 4px
+	width: 100%
+	// max-width: 570px
+	white-space: normal
+	text-align: left
+	// font-size: 24px
+	// color: $white 
+	vertical-align: middle
+	overflow: hidden
+	
+	// box-shadow: 0 0 25px rgba(43, 45, 66, 0.25)
+	display: inline-block
+[data-modal-close]
+	position: absolute
+	top: 0
+	right: 0
+	padding: 20px
+	background-color: transparent
+	font-size: 0
+
+.modal
+	font-family: $tahoma
+	&__form
+		float: left
+		width: 46%
+		margin-left: 25%
+		padding: 80px 125px 66px 95px
+		background-color: $white
+	&__contacts
+		float: left
+		width: 29%
+		padding: 80px 60px 66px 80px
+		background-color: $red
+		color: $white
+
+	&__title
+		text-transform: uppercase
+		font-size: 20px
+		font-weight: normal
+		line-height: 1.7
+		letter-spacing: 1.6px
+		text-align: left
+		
+	&__close
+		.icon
+			color: $grey
+			font-size: 14px
+
+.form 
+	&__label
+		font-family: $tahoma
+		font-size: 14px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 2.14
+		letter-spacing: normal
+		text-align: left
+		color: #b2b2b2
+	&__input,
+	&__file-label
+			width: 100%
+			font-family: $tahoma
+			font-size: 16px
+			line-height: 1.88
+			color: $text
+			border: none
+			outline: none
+			border-bottom: 1px solid #ebebeb
+			&:placehold
+				color: inherit
+	&__file
+		position: absolute;
+		top: 0;
+		opacity: 0;
+	&__file-label
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.btn-submit
+	font-family: $tahoma
+  font-size: 14px
+  font-weight: normal
+  line-height: 2.14
+  letter-spacing: 1.4px
+  text-align: center
+  color: $white
+	background-color: $red

@@ -16,7 +16,7 @@ DOC.ready(() => {
         var el = $(el);
         setTimeout(() => {
           el.addClass('is-active');
-        }, index * 100);
+        }, index * 150);
       });
     });
   });

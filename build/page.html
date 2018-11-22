@@ -555,7 +555,7 @@
             </div>
           </div>
         </div>
-        <div class="features__admin-panel">
+        <div class="features__admin-panel" data-anim-parent>
           <div class="admin">
             <div class="admin__images">
               <div class="admin__image-rect" style="background-image: url(img/admin_panel_rect.png)" data-anim-from="left"></div>
@@ -722,6 +722,11 @@
                         <use xlink:href="img/sprite.svg#icon-gem"></use>
                       </svg>
                     </span>
+                    <div class="process__motion-el" data-motion-el></div>
+                    <div class="process__path">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+                        <path d="M0 0" data-motion-path />
+                      </svg></div>
                   </div>
                   <div class="process__text">
                     <h3 class="process__title" data-title>The project is completed!</h3>
@@ -743,6 +748,63 @@
           </div>
         </div>
       </section>
+      <section class="message section" data-anim-parent>
+        <a href="#" class="message__inner" data-modal-control="reserve">
+          <h5 class="message__top" data-anim-from="left">got a question?</h5>
+          <h3 class="message__bottom" data-anim-from="left">
+            <span class="message__dark">drop us </span>
+            <span class="message__grey">a message</span>
+          </h3>
+        </a>
+      </section>
+      <div data-modal="reserve" class="modal">
+        <div class="modal__container" data-modal-container="data-modal-container">
+          <button class="modal__close" data-modal-close="data-modal-close">
+            <svg class="icon icon-close">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="modal__inner">
+            <div class="modal__form">
+              <form action="/" class="form">
+                <h3 class="modal__title form__title">Drop as a message</h3>
+                <div class="form__group">
+                  <p class="form__label">Your name</p>
+                  <input type="text" class="form__input" value="John Olly" placeholder="Your name" name="user name" id="name" />
+                </div>
+                <div class="form__group">
+                  <p class="form__label">Your email</p>
+                  <input type="email" class="form__input" value="johnolli@gmail.com" placeholder="Your email" name="user email" id="email" />
+                </div>
+                <div class="form__group">
+                  <p class="form__label">Phone</p>
+                  <input type="text" class="form__input" value="+48 (22) 123 45 67 " placeholder="Your phone" name="user phone" id="phone" />
+                </div>
+                <div class="form__group">
+                  <p class="form__label">Attach file</p>
+                  <label for="file" class="form__file-label">
+                    <span>Attach file</span>
+                    <svg class="icon icon-paper-clip-outline">
+                      <use xlink:href="img/sprite.svg#icon-paper-clip-outline"></use>
+                    </svg>
+                  </label>
+                  <input type="file" class="form__file" id="file" />
+                </div>
+                <div class="form__group">
+                  <p class="form__label">Your message</p>
+                  <textarea class="form__textarea" placeholder="My message"></textarea>
+                </div>
+                <div class="form__submit-group">
+                  <button type="submit" class="btn-submit" value="send"> send </button>
+                </div>
+              </form>
+            </div>
+            <div class="modal__contacts">
+              <h3 class="modal__title">sparkle design</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

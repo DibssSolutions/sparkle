@@ -88,40 +88,16 @@ DOC.ready(() => {
       });
     }
 
-    // class Mark {
-    //   constructor()
-    // }
-    function selectors(el) {
-      innerCircle = el.querySelector('[data-circle-inner]');
-      outerCircle = el.querySelector('[data-circle-outer]');
-      innerIconCircle = el.querySelector('[data-icon-circle-inner]');
-      outerIconCircle = el.querySelector('[data-icon-circle-outer]');
-      icon = el.querySelector('[data-icon]');
-      line = el.querySelector('[data-mark-solid-line]');
-      dashedLine = el.querySelector('[data-mark-dashed-line]');
-      text = el.querySelector('.js-slider-text');
-      return {
-        innerCircle,
-        outerCircle,
-        innerIconCircle,
-        outerIconCircle,
-        icon,
-        line,
-        dashedLine,
-        text
-      };
-    }
-
     function animateMark(el) {
-      // const innerCircle = el.querySelector('[data-circle-inner]');
-      // const outerCircle = el.querySelector('[data-circle-outer]');
-      // const innerIconCircle = el.querySelector('[data-icon-circle-inner]');
-      // const outerIconCircle = el.querySelector('[data-icon-circle-outer]');
-      // const icon = el.querySelector('[data-icon]');
-      // const line = el.querySelector('[data-mark-solid-line]');
-      // const dashedLine = el.querySelector('[data-mark-dashed-line]');
-      // const text = el.querySelector('.js-slider-text');
-      selectors(el);
+      const innerCircle = el.querySelector('[data-circle-inner]');
+      const outerCircle = el.querySelector('[data-circle-outer]');
+      const innerIconCircle = el.querySelector('[data-icon-circle-inner]');
+      const outerIconCircle = el.querySelector('[data-icon-circle-outer]');
+      const icon = el.querySelector('[data-icon]');
+      const line = el.querySelector('[data-mark-solid-line]');
+      const dashedLine = el.querySelector('[data-mark-dashed-line]');
+      const text = el.querySelector('.js-slider-text');
+
       var tl = anime.timeline({ easing: 'linear' });
       tl.add({
         targets: innerCircle,

@@ -28,24 +28,28 @@
         +circle(100)
         background-color: rgba($green, 0.3)
         .process:last-child &
-            background-color: red
+            background-color: rgba($blue, 0.7)
     &__circle-inner
         +vcenter
         +circle(80)
         background-color: $green
+        z-index: $z-2
+        .process:last-child &
+            background-color: $blue
     &__icon
         +vcenter
         color: $white
         font-size: 0
-        z-index: $z-2
+        z-index: $zS
         .icon
             font-size: 30px
     &__motion-el
         +circle(20)
-        background-color: red
+        background-color: $green
         position: absolute
         top: 40px
         left: 40px
+
         // transform: translateX(0) 
         // .process_right &
         //     left: auto
@@ -82,4 +86,8 @@
         font-weight: 300
         line-height: 1.33
         color: $grey
+
+// @keyframes pulse
+//     50%
+//         transform: scale(1.3)
 

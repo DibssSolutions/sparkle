@@ -54,14 +54,23 @@ function drawProcess(el) {
       opacity: 1,
       translateX: animePath('x'),
       translateY: animePath('y'),
-      // rotate: path('angle'),
+      // scale: [
+      //   {
+      //     value: 1.2,
+      //     duration: 400
+      //   },
+      //   {
+      //     value: 1,
+      //     duration: 400
+      //   }
+      // ],
       easing: 'linear',
       duration: 800,
       offset: '-=800',
       complete: function() {
         const next = el.nextElementSibling;
+        if (!next) return false;
         drawProcess(next);
-        console.log(animePath('x'));
       }
     });
 }
